@@ -104,7 +104,7 @@ export default function App() {
 
             {/* Mobile Dropdown */}
             <div
-              className={`absolute top-full left-0 w-full backdrop-blur-md bg-black/80 px-6 py-6 flex flex-col items-center space-y-6 md:hidden z-50 shadow-2xl transform transition-all duration-500 ease-in-out ${
+              className={`absolute top-full left-0 w-full backdrop-blur-md bg-/80 px-6 py-6 flex flex-col items-center space-y-6 md:hidden z-50 shadow-2xl transform transition-all duration-500 ease-in-out ${
                 menuOpen
                   ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
                   : "opacity-0 -translate-y-8 scale-90 pointer-events-none"

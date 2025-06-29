@@ -106,7 +106,25 @@ const projects = [
   {
     title: "Chat Application",
     description: "A real-time chat app built with Socket.io.",
-    image: "/images/chat.jpg",
-    link: "https://example.com/chat"
+    image: "/Soon.png",
+    link: "./"
+  },
+  {
+    title: "Mercedez Benz Website",
+    description: "A real-time chat app built with Socket.io.",
+    image: "/Soon.png",
+    link: "./"
+  },
+  {
+    title: "Library Website",
+    description: "A real-time chat app built with Socket.io.",
+    image: "/Soon.png",
+    link: "./"
+  },
+  {
+    title: "E-Commerce Website",
+    description: "A real-time chat app built with Socket.io.",
+    image: "/Soon.png",
+    link: "./"
   }
 ];
