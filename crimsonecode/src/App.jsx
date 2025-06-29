@@ -58,15 +58,19 @@ export default function App() {
             </button>
 
             {/* Mobile Dropdown */}
-            {menuOpen && (
-              <div className="absolute top-full left-0 w-full bg-black px-6 py-4 flex flex-col space-y-4 md:hidden z-50 shadow-lg">
-                <Link to="/" className="hover:text-red-800" onClick={() => setMenuOpen(false)}>HOME</Link>
-                <Link to="/about" className="hover:text-red-800" onClick={() => setMenuOpen(false)}>ABOUT</Link>
-                <Link to="/projects" className="hover:text-red-800" onClick={() => setMenuOpen(false)}>WORK</Link>
-                <Link to="/services" className="hover:text-red-800" onClick={() => setMenuOpen(false)}>SERVICE</Link>
-                <Link to="/contact" className="hover:text-red-800" onClick={() => setMenuOpen(false)}>CONTACT</Link>
-              </div>
-            )}
+            <div
+              className={`absolute top-full left-0 w-full backdrop-blur-md bg-white/0 px-6 py-6 flex flex-col items-center space-y-6 md:hidden z-50 shadow-2xl transform transition-all duration-500 ease-in-out ${
+                menuOpen
+                  ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
+                  : "opacity-0 -translate-y-8 scale-90 pointer-events-none"
+              }`}
+            >
+              <Link to="/" className="hover:text-red-800" onClick={() => setMenuOpen(false)}>Home</Link>
+              <Link to="/about" className="hover:text-red-800" onClick={() => setMenuOpen(false)}>About</Link>
+              <Link to="/projects" className="hover:text-red-800" onClick={() => setMenuOpen(false)}>MyWork</Link>
+              <Link to="/services" className="hover:text-red-800" onClick={() => setMenuOpen(false)}>Services</Link>
+              <Link to="/contact" className="hover:text-red-800" onClick={() => setMenuOpen(false)}>Contact</Link>
+            </div>
           </nav>
 
           {/* Page Content */}
