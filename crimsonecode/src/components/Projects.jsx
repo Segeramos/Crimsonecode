@@ -1,4 +1,3 @@
-import { projects } from "../data";
 import { motion } from "framer-motion";
 
 const cardVariants = {
@@ -53,9 +52,7 @@ export default function Projects() {
             </div>
             <div className="flex flex-col flex-1 px-6 py-5">
               <h3 className="text-xl font-bold text-orange-100 mb-2">{proj.title}</h3>
-              {proj.description && (
-                <p className="text-base text-gray-300 mb-4 flex-1">{proj.description}</p>
-              )}
+             
               {proj.link && (
                 <a
                   href={proj.link}
@@ -73,3 +70,43 @@ export default function Projects() {
     </motion.div>
   );
 }
+
+// 👇 Your project data (images in public/images)
+const projects = [
+  {
+    title: "Portfolio Website",
+    description: "A personal portfolio to showcase my work and skills.",
+    image: "/portfolio.png",
+    link: "https://segeraportfolio.vercel.app/"
+  },
+  {
+    title: "Digital Marketing Agency",
+    description: ".",
+    image: "/Bookie.png",
+    link: "https://d-m-agency.vercel.app/"
+  },
+  {
+    title: "Recipe Finder",
+    description: "A blogging platform with Markdown support and user authentication.",
+    image: "/Savor.png",
+    link: "https://segeramos-savorsphere.web.val.run/"
+  },
+  {
+    title: "Music App",
+    description: "A productivity app to manage daily tasks and track progress.",
+    image: "/Musicapp.png",
+    link: "https://segeramos-musicwebsiteapp.web.val.run/"
+  },
+  {
+    title: "Portfolio",
+    description: "A weather forecasting app using OpenWeatherMap API.",
+    image: "/Portfolio2.png",
+    link: "https://example.com/weather"
+  },
+  {
+    title: "Chat Application",
+    description: "A real-time chat app built with Socket.io.",
+    image: "/images/chat.jpg",
+    link: "https://example.com/chat"
+  }
+];

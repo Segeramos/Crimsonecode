@@ -63,30 +63,27 @@ const Contact = () => {
 
         {/* Right: EmailJS Form */}
         <form ref={form} onSubmit={sendEmail} className="space-y-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-1 gap-4">
             <div>
-              <label className="block text-sm font-medium">First</label>
-              <input name="first_name" type="text" placeholder="First" required className="w-full border border-orange-100 rounded px-3 py-2 mt-1 bg-transparent text-white" />
+              <label className="block text-sm font-medium">Your Name</label>
+              <input name="your_name" type="text" placeholder="Your_Name" required className="w-full border border-orange-100 rounded px-3 py-2 mt-1 bg-transparent text-orange-100" />
             </div>
-            <div>
-              <label className="block text-sm font-medium">Last</label>
-              <input name="last_name" type="text" placeholder="Last" required className="w-full border border-orange-100 rounded px-3 py-2 mt-1 bg-transparent text-white" />
-            </div>
+            
           </div>
 
           <div>
             <label className="block text-sm font-medium">Email</label>
-            <input name="email" type="email" placeholder="example@email.com" required className="w-full border border-orange-100 rounded px-3 py-2 mt-1 bg-transparent text-white" />
+            <input name="email" type="email" placeholder="example@email.com" required className="w-full border border-orange-100 rounded px-3 py-2 mt-1 bg-transparent text-orange-100" />
           </div>
 
           <div>
             <label className="block text-sm font-medium">Phone (optional)</label>
-            <input name="phone" type="text" placeholder="xxx-xxx-xxxx" className="w-full border border-orange-100 rounded px-3 py-2 mt-1 bg-transparent text-white" />
+            <input name="phone" type="text" placeholder="xxx-xxx-xxxx" className="w-full border border-orange-100 rounded px-3 py-2 mt-1 bg-transparent text-orange-100" />
           </div>
 
           <div>
             <label className="block text-sm font-medium">Message</label>
-            <textarea name="message" rows="5" placeholder="Type your message ..." required className="w-full border border-gray-300 rounded px-3 py-2 mt-1 bg-transparent text-white"></textarea>
+            <textarea name="message" rows="5" placeholder="Type your message ..." required className="w-full border border-gray-300 rounded px-3 py-2 mt-1 bg-transparent text-orange-100"></textarea>
           </div>
 
           <button type="submit" className="bg-red-800 hover:bg-red-700 text-orange-100 font-semibold py-2 px-8 rounded-full transition cursor-pointer">
