@@ -16,15 +16,15 @@ export default function App() {
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Navbar */}
           <nav className="relative flex justify-between items-center py-6">
-            <span className="text-3xl font-bold tracking-widest">Portfolio</span>
+            <span className="text-3xl font-bold tracking-widest ml-25">Portfolio</span>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-8 text-sm">
-              <Link to="/" className="hover:text-red-800">HOME</Link>
-              <Link to="/about" className="hover:text-red-800">ABOUT</Link>
-              <Link to="/projects" className="hover:text-red-800">WORK</Link>
-              <Link to="/services" className="hover:text-red-800">SERVICE</Link>
-              <Link to="/contact" className="hover:text-red-800">CONTACT</Link>
+            <div className="hidden md:flex space-x-8 text-sm mr-25">
+              <Link to="/" className="hover:text-red-800">Home</Link>
+              <Link to="/about" className="hover:text-red-800">About</Link>
+              <Link to="/projects" className="hover:text-red-800">MyWork</Link>
+              <Link to="/services" className="hover:text-red-800">Services</Link>
+              <Link to="/contact" className="hover:text-red-800">Contact</Link>
             </div>
 
             {/* Mobile Menu Button */}

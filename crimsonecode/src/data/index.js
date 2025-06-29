@@ -31,7 +31,7 @@ export const about = {
 export const skills = {
   languages: ["JavaScript", "HTML5", "CSS3", "Python"],
   frameworks: ["React", "Tailwind CSS", "Node.js", "Express.js"],
-  tools: ["Git & GitHub", "Figma", "Firebase", "VS Code"],
+  tools: ["Git & GitHub", "Figma", "Firebase", "VS Code", "WordPress", "RankMath", "SemRush", "Canva", "Relume"],
   softSkills: [
     "Creative Problem Solving",
     "Communication",

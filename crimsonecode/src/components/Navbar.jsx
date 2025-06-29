@@ -55,28 +55,28 @@ export default function Navbar() {
         <div className="absolute top-full left-0 w-full bg-black px-6 py-4 flex flex-col space-y-4 md:hidden z-50 shadow-lg">
           <Link
             to="/"
-            className="hover:text-orange-400"
+            className="hover:text-red-700"
             onClick={() => setMenuOpen(false)}
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="hover:text-orange-400"
+            className="hover:text-red-700"
             onClick={() => setMenuOpen(false)}
           >
             About
           </Link>
           <Link
             to="/services"
-            className="hover:text-orange-400"
+            className="hover:text-red-700"
             onClick={() => setMenuOpen(false)}
           >
             Services
           </Link>
           <Link
             to="/contact"
-            className="hover:text-orange-400"
+            className="hover:text-red-700"
             onClick={() => setMenuOpen(false)}
           >
             Contact
