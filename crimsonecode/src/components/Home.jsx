@@ -37,9 +37,9 @@ export default function Home() {
       transition={{ duration: 1 }}
     >
       {/* Hero Section */}
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between flex-1 container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between flex-1 container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-2">
         {/* Left */}
-        <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8 mt-10 lg:mt-0">
+        <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8 mt-4 lg:mt-0 ">
           {/* Animated Heading */}
           <motion.h1
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center lg:text-left"

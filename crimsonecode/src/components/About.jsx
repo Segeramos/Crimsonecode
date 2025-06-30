@@ -93,36 +93,80 @@ export default function About() {
           >
             💼 Work Background
           </motion.h3>
-          <div className="space-y-4">
-            {/* Google Internship */}
-            <motion.div
-              className="p-4 bg-orange-100 rounded-lg shadow-md border-l-4 border-blue-500"
-              variants={bounceIn}
-              custom={1}
-            >
-              <div className="flex items-center mb-2 text-blue-600 font-semibold text-lg">
-                <FaGoogle className="mr-2" /> Google – UX Engineer Intern
-              </div>
-              <p className="text-sm text-gray-600 italic mb-1">Summer 2024</p>
-              <p className="text-gray-700">
-                Redesigned internal tools, increasing productivity by <span className="font-semibold text-green-600">25%</span>.
-              </p>
-            </motion.div>
-            {/* Freelance Work */}
-            <motion.div
-              className="p-4 bg-orange-100 rounded-lg shadow-md border-l-4 border-green-500"
-              variants={bounceIn}
-              custom={2}
-            >
-              <div className="flex items-center mb-2 text-green-600 font-semibold text-lg">
-                <FaLaptopCode className="mr-2" /> Freelance – Frontend Developer
-              </div>
-              <p className="text-sm text-gray-600 italic mb-1">2022 - 2025</p>
-              <p className="text-gray-700">
-                Delivered <span className="font-semibold">scalable</span> React apps with <span className="font-semibold text-purple-600">pixel-perfect</span> UI.
-              </p>
-            </motion.div>
-          </div>
+                  <div className="flex flex-col md:flex-row gap-6 justify-center py-8 ">
+              {/* Rondamo Tech */}
+              <motion.div
+                className="flex-shrink-0 w-full md:w-80 bg-orange-100 rounded-xl shadow p-6 border border-gray-200 text-black"
+                variants={bounceIn}
+                custom={1}
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <img
+                    src="/RT.png"
+                    alt="Rondamo Technologies logo"
+                    className="w-10 h-10 object-contain rounded-full"
+                  />
+                  <h3 className="text-lg font-semibold text-gray-900">Rondamo Technologies</h3>
+                </div>
+                <p className="text-xl text-red-800 mb-4">Digital Marketing (SEO)</p>
+                <p className="text-sm font-bold text-gray-800 mb-4">May 2023 - May 2024</p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                   
+                   I worked on SEO-driven digital marketing, boosting traffic, rankings, and brand visibility online.{" "}
+                    
+                  </li>
+                </ul>
+              </motion.div>
+
+              {/* Rondamo Tech */}
+              <motion.div
+                className="flex-shrink-0 w-full md:w-80 bg-orange-200 rounded-xl shadow p-6 border border-gray-200 text-black"
+                variants={bounceIn}
+                custom={2}
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <img
+                    src="/RT.png"
+                    alt="Rondamo Technologies logo"
+                    className="w-10 h-10 object-contain"
+                  />
+                  <h3 className="text-lg font-semibold text-gray-900">Rondamo Technologies</h3>
+                </div>
+                <p className="text-xl text-red-800 mb-4">Sales and Marketing</p>
+                <p className="text-sm font-bold text-gray-800 mb-4">June 2024 to December 2024</p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2 text-black">
+                    
+                    Led Sales & Marketing efforts, driving revenue growth through strategy, outreach, and market research.{" "}
+                    
+                  </li>
+                </ul>
+              </motion.div>
+
+              {/* Mighty Ape Tech */}
+              <motion.div
+                className="flex-shrink-0 w-full md:w-80 bg-orange-100 text-black rounded-xl shadow p-6"
+                variants={bounceIn}
+                custom={3}
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <img
+                    src="/MAT.png"
+                    alt="Mighty Ape Technologies logo"
+                    className="w-10 h-10 object-contain rounded-full"
+                  />
+                  <h3 className="text-lg font-semibold">Mighty Ape Technologies</h3>
+                </div>
+                <p className="text-xl text-red-800 mb-4">Digital Marketing (SEO)</p>
+                <p className="text-sm text-gray-800 font-bold mb-4">January 2025 to date</p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2 text-black">
+                    I managed SEO strategies to increase website traffic, search rankings, and engagement.{" "}
+                  </li>
+                </ul>
+              </motion.div>
+            </div>
         </div>
       </motion.div>
       
