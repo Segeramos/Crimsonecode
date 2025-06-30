@@ -16,60 +16,26 @@ export default function App() {
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Navbar */}
           <nav className="relative flex justify-between items-center py-6">
-            <span className="text-3xl font-bold tracking-widest ml-25">Portfolio</span>
+            {/* Logo */}
+            <span className="text-3xl font-bold tracking-widest glow-text animate-glow">
+              Portfolio
+            </span>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-8 text-sm mr-25">
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  `hover:text-red-800 pb-1 ${
-                    isActive ? "border-b-2 border-red-500" : ""
-                  }`
-                }
-              >
-                Home
-              </NavLink>
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  `hover:text-red-800 pb-1 ${
-                    isActive ? "border-b-2 border-red-500" : ""
-                  }`
-                }
-              >
-                About
-              </NavLink>
-              <NavLink
-                to="/projects"
-                className={({ isActive }) =>
-                  `hover:text-red-800 pb-1 ${
-                    isActive ? "border-b-2 border-red-500" : ""
-                  }`
-                }
-              >
-                MyWork
-              </NavLink>
-              <NavLink
-                to="/services"
-                className={({ isActive }) =>
-                  `hover:text-red-800 pb-1 ${
-                    isActive ? "border-b-2 border-red-500" : ""
-                  }`
-                }
-              >
-                Services
-              </NavLink>
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  `hover:text-red-800 pb-1 ${
-                    isActive ? "border-b-2 border-red-500" : ""
-                  }`
-                }
-              >
-                Contact
-              </NavLink>
+            <div className="hidden md:flex space-x-8 text-sm">
+              {["/", "/about", "/projects", "/services", "/contact"].map((path, i) => (
+                <NavLink
+                  key={path}
+                  to={path}
+                  className={({ isActive }) =>
+                    `hover:text-red-500 pb-1 ${
+                      isActive ? "border-b-2 border-red-500" : ""
+                    }`
+                  }
+                >
+                  {["Home", "About", "MyWork", "Services", "Contact"][i]}
+                </NavLink>
+              ))}
             </div>
 
             {/* Mobile Menu Button */}
@@ -104,67 +70,26 @@ export default function App() {
 
             {/* Mobile Dropdown */}
             <div
-              className={`absolute top-full left-0 w-full backdrop-blur-md bg-/80 px-6 py-6 flex flex-col items-center space-y-6 md:hidden z-50 shadow-2xl transform transition-all duration-500 ease-in-out ${
+              className={`absolute top-full left-0 w-full backdrop-blur-md bg-black/80 px-6 py-6 flex flex-col items-center space-y-6 md:hidden z-50 shadow-2xl transform transition-all duration-500 ease-in-out ${
                 menuOpen
                   ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
                   : "opacity-0 -translate-y-8 scale-90 pointer-events-none"
               }`}
             >
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  `hover:text-red-400 text-lg font-semibold pb-1 ${
-                    isActive ? "border-b-2 border-red-500" : ""
-                  }`
-                }
-                onClick={() => setMenuOpen(false)}
-              >
-                Home
-              </NavLink>
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  `hover:text-red-400 text-lg font-semibold pb-1 ${
-                    isActive ? "border-b-2 border-red-500" : ""
-                  }`
-                }
-                onClick={() => setMenuOpen(false)}
-              >
-                About
-              </NavLink>
-              <NavLink
-                to="/projects"
-                className={({ isActive }) =>
-                  `hover:text-red-400 text-lg font-semibold pb-1 ${
-                    isActive ? "border-b-2 border-red-500" : ""
-                  }`
-                }
-                onClick={() => setMenuOpen(false)}
-              >
-                MyWork
-              </NavLink>
-              <NavLink
-                to="/services"
-                className={({ isActive }) =>
-                  `hover:text-red-400 text-lg font-semibold pb-1 ${
-                    isActive ? "border-b-2 border-red-500" : ""
-                  }`
-                }
-                onClick={() => setMenuOpen(false)}
-              >
-                Services
-              </NavLink>
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  `hover:text-red-400 text-lg font-semibold pb-1 ${
-                    isActive ? "border-b-2 border-red-500" : ""
-                  }`
-                }
-                onClick={() => setMenuOpen(false)}
-              >
-                Contact
-              </NavLink>
+              {["/", "/about", "/projects", "/services", "/contact"].map((path, i) => (
+                <NavLink
+                  key={path}
+                  to={path}
+                  className={({ isActive }) =>
+                    `hover:text-red-400 text-lg font-semibold pb-1 ${
+                      isActive ? "border-b-2 border-red-500" : ""
+                    }`
+                  }
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {["Home", "About", "MyWork", "Services", "Contact"][i]}
+                </NavLink>
+              ))}
             </div>
           </nav>
 

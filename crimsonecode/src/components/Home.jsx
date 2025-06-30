@@ -31,15 +31,15 @@ const iconItem = {
 export default function Home() {
   return (
     <motion.div
-     className="min-h-screen bg-gradient-to-r from-black py-16 px-4 sm:px-8 text-orange-100 relative"
+      className="min-h-screen bg-gradient-to-r from-black py-16 px-4 sm:px-6 md:px-8 lg:px-12 text-orange-100 relative"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
       {/* Hero Section */}
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between flex-1 container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-2">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between flex-1 container mx-auto gap-12 py-12 md:py-2">
         {/* Left */}
-        <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8 mt-4 lg:mt-0 ">
+        <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8 mt-4 lg:mt-0">
           {/* Animated Heading */}
           <motion.h1
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center lg:text-left"
@@ -61,7 +61,7 @@ export default function Home() {
           </motion.p>
           {/* Animated Form */}
           <motion.div
-            className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mt-6 sm:mt-8 w-full"
+            className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mt-6 sm:mt-8 w-full max-w-md mx-auto lg:mx-0"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.9 }}
@@ -69,7 +69,7 @@ export default function Home() {
             <input
               type="email"
               placeholder="Email Address"
-              className="w-full sm:w-auto rounded-lg px-4 py-3 bg-orange-100 text-black focus:outline-none focus:ring-4 focus:ring-orange-600 transition"
+              className="w-full sm:w-auto rounded-lg px-4 py-3 bg-orange-100 text-black focus:outline-none focus:ring-4 focus:ring-red-500 transition"
             />
             <motion.button
               className="w-full sm:w-auto bg-red-800 hover:bg-red-700 text-orange-100 rounded-lg px-4 py-3 font-semibold shadow-lg hover:scale-105 transition"
@@ -79,9 +79,9 @@ export default function Home() {
               Connect with me
             </motion.button>
           </motion.div>
-          {/* Social links with enhanced animation */}
+          {/* Social links */}
           <motion.div
-            className="flex justify-center lg:justify-start space-x-6 mt-20"
+            className="flex justify-center lg:justify-start space-x-4 sm:space-x-6 mt-20"
             variants={iconsContainer}
             initial="hidden"
             animate="show"
@@ -90,7 +90,7 @@ export default function Home() {
               href="https://x.com/bookie_DM?t=DWOme_6DSoI75b_vCHQGbw&s=08"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-orange-600 transition"
+              className="hover:text-red-600 transition"
               variants={iconItem}
               whileHover={{
                 scale: 1.25,
@@ -106,7 +106,7 @@ export default function Home() {
               href="https://www.linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-orange-600 transition"
+              className="hover:text-red-600 transition"
               variants={iconItem}
               whileHover={{
                 scale: 1.25,
@@ -122,7 +122,7 @@ export default function Home() {
               href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-orange-600 transition"
+              className="hover:text-red-600 transition"
               variants={iconItem}
               whileHover={{
                 scale: 1.25,
@@ -138,7 +138,7 @@ export default function Home() {
               href="https://wa.me/254756627342"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-orange-600 transition"
+              className="hover:text-red-600 transition"
               variants={iconItem}
               whileHover={{
                 scale: 1.25,
@@ -154,7 +154,7 @@ export default function Home() {
               href="https://github.com/Segeramos"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-orange-600 transition"
+              className="hover:text-red-600 transition"
               variants={iconItem}
               whileHover={{
                 scale: 1.25,
@@ -169,12 +169,12 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Right: Animated Profile Image */}
+        {/* Right: Profile Image */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <motion.img
             src="/profile.png"
             alt="Profile"
-            className="rounded-2xl shadow-lg w-64 h-64 sm:w-80 sm:h-80 lg:w-[600px] lg:h-[600px] object-cover border-8 border-orange-100/10"
+            className="rounded-2xl shadow-lg w-64 h-64 sm:w-80 sm:h-80 md:w-[400px] md:h-[400px] lg:w-[600px] lg:h-[600px] object-cover border-8 border-orange-100/10"
             initial={{ opacity: 0, x: 300, rotate: 6 }}
             animate={{
               opacity: 1,

@@ -2,7 +2,7 @@ import { about, skills } from "../data";
 import { FaGoogle, FaLaptopCode } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-// Certification data (as you had it)
+// Certification data
 const certifications = [
   {
     name: 'Front-End Web Development',
@@ -73,14 +73,14 @@ const containerStagger = {
 export default function About() {
   return (
     <motion.div
-      className="min-h-screen bg-gradient-to-r from-black py-16 px-4 sm:px-8 text-orange-100 relative"
+      className="min-h-screen bg-gradient-to-r from-black py-16 px-4 sm:px-6 md:px-8 lg:px-12 text-orange-100 relative"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.1 }}
     >
       {/* Work Background */}
       <motion.div
-        className="md:flex gap-12 mb-8"
+        className="flex flex-col gap-12 mb-8"
         initial="hidden"
         animate="visible"
         variants={containerStagger}
@@ -93,83 +93,57 @@ export default function About() {
           >
             💼 Work Background
           </motion.h3>
-                  <div className="flex flex-col md:flex-row gap-6 justify-center py-8 ">
-              {/* Rondamo Tech */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center py-8">
+            {/* Each Work Card */}
+            {[
+              {
+                company: "Rondamo Technologies",
+                logo: "/RT.png",
+                role: "Digital Marketing (SEO)",
+                dates: "May 2023 - May 2024",
+                description: "I worked on SEO-driven digital marketing, boosting traffic, rankings, and brand visibility online.",
+                bg: "bg-orange-100"
+              },
+              {
+                company: "Rondamo Technologies",
+                logo: "/RT.png",
+                role: "Sales and Marketing",
+                dates: "June 2024 to December 2024",
+                description: "Led Sales & Marketing efforts, driving revenue growth through strategy, outreach, and market research.",
+                bg: "bg-orange-200"
+              },
+              {
+                company: "Mighty Ape Technologies",
+                logo: "/MAT.png",
+                role: "Digital Marketing (SEO)",
+                dates: "January 2025 to date",
+                description: "I managed SEO strategies to increase website traffic, search rankings, and engagement.",
+                bg: "bg-orange-100"
+              }
+            ].map((job, i) => (
               <motion.div
-                className="flex-shrink-0 w-full md:w-80 bg-orange-100 rounded-xl shadow p-6 border border-gray-200 text-black"
+                key={i}
+                className={`w-full ${job.bg} rounded-xl shadow p-6 border border-gray-200 text-black`}
                 variants={bounceIn}
-                custom={1}
+                custom={i + 1}
               >
                 <div className="flex items-center gap-3 mb-4">
                   <img
-                    src="/RT.png"
-                    alt="Rondamo Technologies logo"
+                    src={job.logo}
+                    alt={`${job.company} logo`}
                     className="w-10 h-10 object-contain rounded-full"
                   />
-                  <h3 className="text-lg font-semibold text-gray-900">Rondamo Technologies</h3>
+                  <h3 className="text-lg font-semibold text-gray-900">{job.company}</h3>
                 </div>
-                <p className="text-xl text-red-800 mb-4">Digital Marketing (SEO)</p>
-                <p className="text-sm font-bold text-gray-800 mb-4">May 2023 - May 2024</p>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                   
-                   I worked on SEO-driven digital marketing, boosting traffic, rankings, and brand visibility online.{" "}
-                    
-                  </li>
-                </ul>
+                <p className="text-xl text-red-800 mb-4">{job.role}</p>
+                <p className="text-sm font-bold text-gray-800 mb-4">{job.dates}</p>
+                <p className="text-black">{job.description}</p>
               </motion.div>
-
-              {/* Rondamo Tech */}
-              <motion.div
-                className="flex-shrink-0 w-full md:w-80 bg-orange-200 rounded-xl shadow p-6 border border-gray-200 text-black"
-                variants={bounceIn}
-                custom={2}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <img
-                    src="/RT.png"
-                    alt="Rondamo Technologies logo"
-                    className="w-10 h-10 object-contain"
-                  />
-                  <h3 className="text-lg font-semibold text-gray-900">Rondamo Technologies</h3>
-                </div>
-                <p className="text-xl text-red-800 mb-4">Sales and Marketing</p>
-                <p className="text-sm font-bold text-gray-800 mb-4">June 2024 to December 2024</p>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2 text-black">
-                    
-                    Led Sales & Marketing efforts, driving revenue growth through strategy, outreach, and market research.{" "}
-                    
-                  </li>
-                </ul>
-              </motion.div>
-
-              {/* Mighty Ape Tech */}
-              <motion.div
-                className="flex-shrink-0 w-full md:w-80 bg-orange-100 text-black rounded-xl shadow p-6"
-                variants={bounceIn}
-                custom={3}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <img
-                    src="/MAT.png"
-                    alt="Mighty Ape Technologies logo"
-                    className="w-10 h-10 object-contain rounded-full"
-                  />
-                  <h3 className="text-lg font-semibold">Mighty Ape Technologies</h3>
-                </div>
-                <p className="text-xl text-red-800 mb-4">Digital Marketing (SEO)</p>
-                <p className="text-sm text-gray-800 font-bold mb-4">January 2025 to date</p>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2 text-black">
-                    I managed SEO strategies to increase website traffic, search rankings, and engagement.{" "}
-                  </li>
-                </ul>
-              </motion.div>
-            </div>
+            ))}
+          </div>
         </div>
       </motion.div>
-      
+
       {/* Skills & Tools */}
       <motion.div
         className="mt-12"
@@ -180,8 +154,9 @@ export default function About() {
         <h3 className="text-2xl font-semibold flex items-center mb-4">
           <span className="mr-2">🛠️</span> Skills & Tools
         </h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-lg">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-lg">
           <motion.div
+            className="text-center sm:text-left"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.7, type: "spring" }}
@@ -192,6 +167,7 @@ export default function About() {
             </ul>
           </motion.div>
           <motion.div
+            className="text-center sm:text-left"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.85, type: "spring" }}
@@ -202,6 +178,7 @@ export default function About() {
             </ul>
           </motion.div>
           <motion.div
+            className="text-center sm:text-left"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1, type: "spring" }}
@@ -212,6 +189,7 @@ export default function About() {
             </ul>
           </motion.div>
           <motion.div
+            className="text-center sm:text-left"
             initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.15, type: "spring" }}
@@ -238,7 +216,7 @@ export default function About() {
         >
           📜 Certifications
         </motion.h3>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, index) => (
             <motion.a
               key={index}
@@ -256,7 +234,7 @@ export default function About() {
               whileTap={{ scale: 0.95 }}
             >
               <img src={cert.logo} alt={cert.issuer} className="h-16 mb-4 object-contain" />
-              <h4 className="text-lg font-bold text-red-800">{cert.name}</h4>
+              <h4 className="text-lg font-bold text-red-800 text-center">{cert.name}</h4>
               <p className="text-sm text-gray-600">{cert.issuer}</p>
             </motion.a>
           ))}
