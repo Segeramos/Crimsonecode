@@ -36,12 +36,23 @@ export default function Projects() {
       </div>
 
       {/* Graphic Design Projects */}
-      <h3 className="text-2xl font-semibold text-center mb-6">Graphic Design Projects</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
-        {designProjects.map((proj, i) => (
-          <ProjectCard proj={proj} i={i} key={i} />
-        ))}
-      </div>
+
+        <h3 className="text-2xl font-semibold text-center mb-6">Graphic Design Projects</h3>
+        <div className="flex flex-wrap justify-center gap-6 mb-12">
+          {designProjects.map((proj, i) => (
+            <div
+              key={i}
+              className="w-100 h-100 rounded-xl overflow-hidden bg-black flex items-center justify-center border border-white/10 shadow-xl"
+            >
+              <img
+                src={proj.image}
+                alt={proj.title}
+                className="object-cover w-full h-full"
+              />
+            </div>
+          ))}
+        </div>
+
 
       {/* SEO Services */}
       <h3 className="text-2xl font-semibold text-center mb-6">SEO Services</h3>
@@ -155,6 +166,36 @@ const webProjects = [
 
 // 👇 Graphic Design Projects
 const designProjects = [
+  {
+    title: "Portfolio Graphic",
+    description: "A graphic design showcase for portfolio branding.",
+    image: "/Soon.png",
+    link: "./"
+  },
+  {
+    title: "Portfolio Graphic",
+    description: "A graphic design showcase for portfolio branding.",
+    image: "/Soon.png",
+    link: "./"
+  },
+  {
+    title: "Portfolio Graphic",
+    description: "A graphic design showcase for portfolio branding.",
+    image: "/Soon.png",
+    link: "./"
+  },
+  {
+    title: "Portfolio Graphic",
+    description: "A graphic design showcase for portfolio branding.",
+    image: "/Soon.png",
+    link: "./"
+  },
+  {
+    title: "Portfolio Graphic",
+    description: "A graphic design showcase for portfolio branding.",
+    image: "/Soon.png",
+    link: "./"
+  },
   {
     title: "Portfolio Graphic",
     description: "A graphic design showcase for portfolio branding.",
