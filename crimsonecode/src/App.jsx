@@ -1,4 +1,5 @@
 // src/App.jsx
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import Home from "./components/Home";
@@ -6,6 +7,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
+import Blog from "./components/Blog";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,10 +18,13 @@ export default function App() {
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Navbar */}
           <nav className="relative flex justify-between items-center py-6">
-            {/* Logo */}
-            <span className="text-3xl font-bold tracking-widest glow-text animate-glow">
+            {/* Logo (Portfolio link) */}
+            <Link
+              to="/blog"
+              className="text-3xl font-bold tracking-widest glow-text animate-glow cursor-pointer"
+            >
               Portfolio
-            </span>
+            </Link>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8 text-sm">
@@ -70,7 +75,7 @@ export default function App() {
 
             {/* Mobile Dropdown */}
             <div
-              className={`absolute top-full left-0 w-full backdrop-blur-md bg-black/80 px-6 py-6 flex flex-col items-center space-y-6 md:hidden z-50 shadow-2xl transform transition-all duration-500 ease-in-out ${
+              className={`absolute top-full left-0 w-full backdrop-blur-md  px-6 py-6 flex flex-col items-center space-y-6 md:hidden z-50 shadow-2xl transform transition-all duration-500 ease-in-out ${
                 menuOpen
                   ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
                   : "opacity-0 -translate-y-8 scale-90 pointer-events-none"
@@ -101,6 +106,7 @@ export default function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} /> {/* <-- Add your Blog route here */}
             </Routes>
           </main>
         </div>
